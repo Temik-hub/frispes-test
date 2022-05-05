@@ -1,0 +1,94 @@
+.why-frispes__container {
+  @include centering-main;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 112px;
+  @media (max-width: 991px) {
+    padding-bottom: 33px;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+}
+.why-frispes__our-support{
+  max-width: 500px;
+}
+.why-frispes__table {
+  display: flex;
+  justify-content: space-between
+}
+.why-frispes__table-body {
+  @include font-lora;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  color: $primary-blue;
+  font-size: 32px;
+  line-height: 41px;
+  @media (max-width: 991px) {
+    padding-top: 20px;
+    justify-content: space-between;  
+    gap: 30px;  
+  }
+  @media (max-width: 479px) {
+    font-size: 20px;
+    line-height: 20px;
+    gap: 10px
+  }
+}
+.why-frispes__table-row {
+  display: flex;
+  gap: 117px;
+  @media (max-width: 991px) {
+    justify-content: space-between;
+  }
+  @media (max-width: 479px) {
+    gap: 10px;
+  }
+}
+.why-frispes__table-data {
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 479px) {
+    min-width: none;
+    text-align: center;
+  }
+}
+.why-frispes__grey {
+  @include font-main;
+  font-size: 16px;
+  line-height: 26px;
+  color: $secondary-grey;
+}
+.why-frispes__description {
+  @include font-main;
+  max-width: 540px;
+  padding: 53px;
+  background-color: $primary-blue;
+  color: $primary-white;
+  @media (max-width: 991px) {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 25px;
+  }
+}
+.why-frispes__heading {
+  margin: 0;
+  padding-right: 8px;
+  padding-bottom: 8px;
+}
+.why-frispes__title {
+  @include font-lora;
+  margin: 0;
+  padding-bottom: 24px;
+  font-size: 40px;
+  line-height: 51px;
+  @media (max-width: 991px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+.why-frispes__text {
+  margin: 0;
+}

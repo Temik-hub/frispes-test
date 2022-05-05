@@ -1,0 +1,121 @@
+.footer {
+  background-color: $primary-blue;
+}
+.footer__container {
+  @include font-main;
+  max-width: 1150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-top: 56px;
+  padding-bottom: 100px;
+  @media (max-width: 1091px) {
+    justify-content: center;
+    padding: 30px 10px 60px 10px;
+  }
+}
+.footer__about {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  margin-right: 10px;
+  @media (max-width: 1091px) {
+    margin: 0;
+    max-width: none;
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+.footer__logo {
+  width: 181px;
+  height: 67px;
+  padding-bottom: 16px;
+  padding-right: 16px;
+
+}
+.footer__text {
+  margin: 0;
+  padding-bottom: 24px;
+  font-size: 16px;
+  line-height: 26px;
+  color: $primary-white;
+  @media (max-width: 1091px) {
+    max-width: 340px;
+  }
+  @media (max-width: 400px) {
+    line-height: 20px;
+  }
+}
+.footer__social {
+  display: flex;
+  padding-bottom: 16px;
+  & svg {
+    margin-right: 18px;
+    fill: $primary-white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      fill: $primary-orange;
+    }
+  }
+}
+.footer__content {
+  max-width: 730px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+  @media (max-width: 400px) {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
+}
+.footer__title {
+  display: block;
+  padding: 9px;
+  padding-bottom: 24px;
+  font-weight: 500;
+  color: $secondary-white;
+  opacity: 0.5;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  &:last-child {
+    max-width: 212px;
+    @media (max-width: 400px) {
+      max-width: none;
+    }
+  }
+}
+.footer__link {
+  display: block;
+  padding: 9px;
+  text-decoration: none;
+  color: $primary-white;
+  font-size: 16px;
+  line-height: 26px;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    color: $primary-orange;
+  }
+  @media (max-width: 400px) {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+.footer__contacts {
+  max-width: 212px;
+}

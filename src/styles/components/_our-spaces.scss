@@ -1,0 +1,132 @@
+.our-spaces__container {
+  @include centering-main;
+  padding-bottom: 117px;
+  @media (max-width: 991px) {
+    padding: 10px;
+    padding-bottom: 33px;
+  }
+}
+.our-spaces__header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 56px;
+  width: 100%;
+  @media (max-width: 1120px) {
+    flex-wrap: wrap;
+    padding-bottom: 33px;
+  }
+}
+.our-spaces__title {
+  @include font-lora;
+  margin: 0;
+  padding-right: 150px;
+  font-size: 40px;
+  line-height: 51px;
+  color: $primary-blue;
+  padding-bottom: 8px;
+  @media (max-width: 991px) {
+    font-size: 32px;
+    line-height: 40px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+  }
+}
+.our-spaces__subtitle {
+  margin: 0;
+  @include font-main;
+  max-width: 452px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: $primary-grey;
+}
+.our-space__card-title {
+  @include font-lora;
+  margin: 0;
+  padding-bottom: 14px;
+  font-size: 40px;
+  line-height: 51px;
+  color: $primary-white;
+  text-align: center;
+  @media (max-width: 991px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+.our-space__card-text {
+  @include font-main;
+  max-width: 250px;
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: $primary-white;
+  text-align: center;
+}
+.our-spaces__slider {
+  position: relative;
+  height: 100%;
+  & .slick-arrow {
+    position: absolute;
+    top: -70px;
+    width: 70px;
+    height: 70px;
+    z-index: 10;
+    font-size: 0;
+    cursor: pointer;
+    @media (max-width: 1120px) {
+      display: none;
+      }
+    }
+  & .slick-arrow.slick-prev {
+    left: 870px;
+    background: url('../images/icons/arrow-left.svg') 0 0 / 100% no-repeat;
+   }
+  & .slick-arrow.slick-next {
+    right: 0;
+    top: -104px;
+    background: url('../images/icons/arrow-left.svg') 0 0 / 100% no-repeat;
+    transform: rotate(180deg);
+    }
+  }
+.our-spaces__slider-item {
+  padding-right: 20px;
+}
+.our-spaces__slider-button {
+  @include font-main;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  bottom: 83px;
+  width: 100%;
+  max-width: 255px;
+  height: 72px;
+  padding: 10px;
+  padding-left: 40px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: $primary-white;
+  background: url('../images/icons/angle-right-b.svg') 93% 50% / 15% no-repeat;
+  background-color: $primary-orange;
+  cursor: pointer;
+  @media (max-width: 1120px) {
+    display: none;
+  }
+}
+.our-spaces__slider-text {
+  @include font-main;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 25px;
+  color: $primary-black;
+  @media (max-width: 1120px) {
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

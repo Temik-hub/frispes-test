@@ -1,0 +1,81 @@
+.use-frispes__container {
+  @include centering-main;
+  padding-bottom: 112px;
+  @media (max-width: 991px) {
+    padding: 10px;
+    padding-bottom: 33px;
+  }
+}
+.use-frispes__title {
+  @include font-lora;
+  margin: 0;
+  padding-bottom: 24px;
+  font-size: 40px;
+  line-height: 51px;
+  text-align: center;
+  color: $secondary-blue;
+  @media (max-width: 991px) {
+    font-size: 32px;
+    line-height: 40px;
+    padding-bottom: 20px;
+  }
+}
+.use-frispes__subtitle {
+  @include font-main;
+  margin: 0;
+  padding-bottom: 56px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: $secondary-grey;
+  @media (max-width: 991px) {
+    padding-bottom: 20px;
+  }
+}
+.use-frispes__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  @media (max-width: 991px) {
+    justify-content: center;
+  }
+  @media (max-width: 369px) {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+.use-frispes__item {
+  padding: 10px;
+}
+.use-frispes__link {
+  display: flex;
+  min-width: 120px;
+  height: 45px;
+  background-image: url("../images/icons/companies.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 0;
+  &--tokopedia {
+    min-width: 180px;
+    background-position: -180px;
+  }
+  &--upwork {
+    background-position: -420px
+  }
+  &--microsoft {
+    min-width: 170px;
+    background-position: -600px;
+  }
+  &--shopify {
+    min-width: 145px;
+    background-position: -830px;
+  }
+  &--stripe {
+    background-position: -1045px;
+  }
+}

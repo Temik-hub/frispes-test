@@ -1,0 +1,117 @@
+.faq__container {
+  @include centering-main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 132px;
+  @media (max-width: 991px) {
+    padding: 10px;
+    padding-bottom: 33px;
+  }
+}
+.faq__title {
+  @include font-lora;
+  max-width: 578px;
+  padding-bottom: 51px;
+  margin: 0;
+  text-align: center;
+  font-size: 40px;
+  line-height: 51px;
+  color: $primary-blue;
+  @media (max-width: 991px) {
+    font-size: 32px;
+    line-height: 40px;
+    padding-bottom: 20px;
+  }
+}
+.faq__accordion {
+  display: flex;
+  gap: 30px;
+  padding-bottom: 64px;
+  @media (max-width: 1120px) {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+.faq__card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 350px;
+  min-height: 171px;
+  padding: 42px 40px;
+  box-shadow: 0 20px 50px 10px $third-grey;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  &:hover {
+    background-color: $primary-orange;
+  }
+  &:hover .faq_svg {
+    background-color: $primary-white;
+  }
+  &:hover ::after {
+    background-color: $primary-orange;
+  }
+  @media (max-width: 1120px) {
+    display: block;
+    max-width: none;
+    width: 100%;
+    min-height: max-content;
+    padding: 20px;
+    padding-bottom: 30px;
+  }
+}
+.faq__card-title {
+  @include font-lora;
+  margin: 0;
+  text-align: center;
+  font-size: 26px;
+  line-height: 33px;
+  font-weight: 400;
+  @media (max-width: 748px) {
+    font-size: 20px;
+  }
+}
+.faq__card-text {
+  display: none;
+}
+.faq_svg {
+  position: absolute;
+  bottom: -25px;
+  left: 145px;
+  width: 64px;
+  height: 48px;
+  background-color: $primary-orange;
+  transition: all 0.3s ease-out; 
+  &::after {
+    position: absolute;
+    content: '';
+    top: 20%;
+    left: 25%;
+    width: 64px;
+    height: 48px;
+    -webkit-mask: url("../images/icons/angle-down.svg") no-repeat;
+    mask: url("../images/icons/angle-down.svg") no-repeat;
+    -webkit-mask-size: 50%;
+    mask-size: cover;
+    background-color: $primary-white;
+  }
+  @media (max-width: 1120px) {
+    left: 47%;
+  }
+  @media (max-width: 600px) {
+    left: 43%;
+  }
+}
+.faq__link {
+  @include font-main;
+  display: flex;
+  font-size: 16px;
+  line-height: 26px;
+  text-decoration: none;
+  color: $primary-orange;
+  & svg {
+    fill: $primary-orange;
+  } 
+}

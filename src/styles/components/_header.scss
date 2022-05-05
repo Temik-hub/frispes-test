@@ -1,0 +1,133 @@
+.header__container {
+  @include font-bold;
+  @include centering-flex;
+  position: relative;
+  padding-top: 61px;
+  padding-bottom: 56px;
+  @media (max-width: 991px) {
+    padding: 30px 10px 30px 10px;
+  }
+}
+.header__logo {
+  display: flex;
+  padding: 6px;
+}
+.header__menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 130px;
+  max-height: 41px;
+  @media (max-width: 1130px) {
+    display: none;
+    max-height: none;
+    min-width: 200px;
+    padding: 0;
+    position: absolute;
+    top: 65px;
+    right: -200px;
+    background-color: $primary-grey;
+    &--open {
+      display: flex;
+      justify-content: center;
+      right: 50px;
+    }
+  }
+}
+.header__list {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  @media (max-width: 1130px) {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+}
+.header__link {
+  padding: 12px 20px;
+  text-decoration: none;
+  color: $primary-black;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    color: $primary-orange;
+  }
+  @media (max-width: 1130px) {
+    display: flex;
+    color: $primary-white;
+  }
+}
+.header__button-wrapper {
+  display: flex;
+  @media (max-width: 1130px) {
+    display: none;
+  }
+}
+.header__button {
+  padding: 12px 24px;
+  text-decoration: none;
+  color: $primary-orange;
+  line-height: 19px;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    color: $secondary-orange;
+  }
+  &--active {
+    color: $primary-white;
+    background-color: $primary-orange;
+    &:hover {
+      box-shadow: 0px 4px 16px rgba(255, 87, 34, 0.32);
+    }
+  }
+}
+.header__burger {
+  cursor: pointer;
+  display: none;
+  top: -4px;
+  width: 30px;
+  height: 40px;
+  line-height: 10px;  
+  padding: 0;
+  background-color: inherit;
+  border: none;
+  @media (max-width: 1130px) {
+    display: flex;
+    align-items: center;
+  }
+}
+.header__burger-line {
+  position: relative;
+  display: inline-flex;
+  background-color: $primary-black;
+  width: 100%;
+  height: 2px;  
+  transition: 0.2s ease-in-out;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background-color: $primary-black;
+    width: 100%;
+    height: 2px;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    background-color: $primary-black;
+    width: 100%;
+    height: 2px;
+  }
+  &--open {
+    transform: rotate(40deg);
+    transition: 0.3s ease-in-out;
+  }
+  &--open::before {
+    display: none;
+  }
+  &--open::after {
+    transform: translateY(10px) rotate(-80deg);
+  }
+}
