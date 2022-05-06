@@ -1,20 +1,31 @@
 import './styles/main.scss'
 import './slick.min.js'
 import $ from 'jquery'
-// import 'slick-carousel'
-// import 'slick-slider'
 
 const burger = document.querySelector('.header__burger')
 const burgerLine = document.querySelector('.header__burger-line')
 const menu = document.querySelector('.header__menu')
-const card = document.querySelector('.news__card--primary')
-const screenWidth = window.screen.width
+const acc = document.getElementsByClassName("faq__card");
 
 burger.addEventListener('click', function() {
   burgerLine.classList.toggle('header__burger-line--open')
   menu.classList.toggle('header__menu--open')
 })
 
+for (let i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+
+    let panel = this.nextElementSibling;
+    if (panel.style.display === "flex") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "flex";
+    }
+  });
+}
+
+// sliders //
 
 $('.hero__slider').slick({
   dots: true,

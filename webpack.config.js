@@ -14,7 +14,7 @@ module.exports = {
   output: {
     filename: '[name].[contenthash].js',
     assetModuleFilename: "assets/[hash][ext][query]",
-    clean: true,
+    // clean: true,
   },
   devtool: 'source-map',
   devServer: {
